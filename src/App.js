@@ -1,8 +1,8 @@
 import BarraNav from "./Components/NavBar/BarraNav";
 import React from "react";
 import { BrowserRouter, Link } from 'react-router-dom';
-import { Routes, Route,Navigate } from 'react-router';
-import MovieDetails from "./PelisModel/MovieDetails";
+import { Routes, Route } from 'react-router';
+import MovieDetails from '../src/Components/MovieDetails/MovieDetails';
 import Landing from "./Pages/Landng";
 
 const  App = () => {
@@ -15,14 +15,10 @@ const  App = () => {
             <Routes>
               <Route path="/" element={ <Landing /> }/>
               <Route path="/details/:detailId" element={ <MovieDetails /> }/>
-
             </Routes> 
         </BrowserRouter>
      </>
    )
-     
-     
 }
-
 
 export default App;

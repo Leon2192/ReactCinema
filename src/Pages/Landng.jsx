@@ -1,4 +1,4 @@
-import MoviesGrid from "../PelisModel/MoviesGrid"
+import MoviesGrid from "../Components/MoviesGrid/MoviesGrid";
 
 const Landing= () => {
     return <MoviesGrid/>
