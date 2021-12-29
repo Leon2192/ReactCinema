@@ -28,15 +28,15 @@ const MovieDetails = () => {
 
     const imageUrl = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
     return (
-    <div className={styles.detailsContainer}>
-       <img className={styles.col + ' ' + styles.movieImage} src={imageUrl} alt={movie.title} />
-    <div className={styles.col + ' ' + styles.movieDetails}>
+     <div className={styles.detailsContainer}>
+        <img className={styles.col + ' ' + styles.movieImage} src={imageUrl} alt={movie.title} />
+      <div className={styles.col + ' ' + styles.movieDetails}>
         <p className={styles.firstItem}><strong> Title:{movie.title} </strong></p>
         <p><strong> Description:{movie.overview}</strong></p>
         <p>
-         <strong>Genres:</strong>{movie.genres.map(genre => genre.name).join(", ")}
+        <strong>Genres:</strong>{movie.genres.map(genre => genre.name).join(", ")}
         </p>
-    </div>
+      </div>
     </div>
     );
 }
