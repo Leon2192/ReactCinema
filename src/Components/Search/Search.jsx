@@ -26,8 +26,13 @@ export const Search = () => {
                 <input 
                 className={styles.searchInput} 
                 type="text" placeholder='Buscar...'
-                value={searchText}
-                 onChange={(e) => setSearchText(e.target.value)}
+                value={search ?? ""}
+                autoFocus
+                aria-label="Search Movies"
+                 onChange={(e) => {
+                    const value = e.target.value;
+                    navigate("/?search=" + value);
+                  }}
                  />
                  
                 <button className={styles.searchButton} type='submit' >

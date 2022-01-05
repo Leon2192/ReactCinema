@@ -3,6 +3,7 @@ import { get } from '../../Services/HttpClient';
 import styles from './MovieDetails.module.css';
 import {useEffect, useState} from 'react';
 import Loader from '../Loader/Loader';
+import { getMovieImg } from '../../Services/getImg';
 
 const MovieDetails = () => {
     const {detailId} = useParams();
@@ -26,7 +27,8 @@ const MovieDetails = () => {
         return null;
     }
 
-    const imageUrl = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+    const imageUrl = getMovieImg(movie.poster_path, 500);
+    
     return (
      <div className={styles.detailsContainer}>
         <img className={styles.col + ' ' + styles.movieImage} src={imageUrl} alt={movie.title} />
