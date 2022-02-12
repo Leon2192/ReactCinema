@@ -10,7 +10,7 @@ const  Routing = () => {
    return(
      <>
       <BrowserRouter>
-            <h1>Hoyts</h1>
+            <h1>Cinema</h1>
             <BarraNav />
             <Link to="/"><h1>Películas</h1></Link>
             <Routes>
